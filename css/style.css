@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    box-sizing: border-box;
+    max-width: 1240px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-area: head;
+    grid-template-rows: 100px 200px 1fr 100px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+            "head head"
+            "about_me about_me"
+            "my_knowledge my_knowledge"
+            "foot foot";
+    background-color: darkgray;
+}
+
+.grid-item {
+    /*width: 100% !important;*/
+    background-size: cover !important;
+}
+
+.header {
+    grid-area: head;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: cadetblue;
+    align-items: center;
+}
+
+.logo {
+    grid-column: 1/2;
+    margin-left: 30px;
+    /*justify-self: center;*/
+}
+
+.logo img {
+    height: 45px;
+}
+
+.nav_desktop {
+    grid-column: 2/5;
+    justify-self: start;
+}
+
+.nav_desktop ul {
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+}
+
+.nav_desktop ul li {
+    list-style-type: none;
+}
+
+.nav_desktop ul li:nth-child(2n) {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.nav_link {
+    text-decoration: none;
+    /*color: #34547A;*/
+    color: #e4e7af;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav_link:hover {
+    color: #f1d216;
+    text-shadow: 2px 2px 2px black;
+}
+
+.about_me {
+    grid-area: about_me;
+    display: grid;
+    /*grid-template-rows: 10px 1fr 10px;*/
+    grid-template-columns: repeat(6, 1fr);
+    background-color: lightgray;
+}
+
+.about_me_photo {
+    grid-column: 2;
+    /*grid-row: 2;*/
+    justify-self: center;
+    align-self: center;
+}
+
+.about_me_photo img {
+    height: 130px;
+}
+
+.about_me_text {
+    grid-column: 3/6;
+    /*grid-row: 2/3;*/
+    /*padding: 15px 0 10px 0;*/
+    line-height: 26px;
+    align-self: center;
+}
+
+.about_me_text h2 {
+    margin-bottom: 15px;
+}
+
+.my_knowledge {
+    grid-area: my_knowledge;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: 32px 470px 10px;
+    column-gap: 10px;
+    background-color: lightgray;
+    padding: 0 10px 0 10px;
+}
+
+.knowledge_title {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 25px;
+}
+
+.knowledge_title h2 {
+    font-weight: 500;
+}
+
+.knowledge_web_server {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.knowledge_web_server h4 {
+    margin-right: 25px;
+    text-align: right;
+}
+
+.knowledge_web_server a {
+    font-weight: 500;
+}
+
+.knowledge {
+    grid-row: 2;
+    background-color: black;
+    font-size: 14px;
+    color: white;
+}
+
+.knowledge_header {
+    height: 40px;
+    background-color: lightgray;
+    margin: 2px 2px 0 2px;
+}
+
+.knowledge_header h3 {
+    color: #454b50;
+    text-align: center;
+    line-height: 14px;
+    padding: 14px 0;
+}
+
+.knowledge_body {
+    padding: 7px;
+    overflow: auto;
+    height: 415px;
+}
+
+footer {
+    grid-area: foot;
+    /*grid-column: 1/2;*/
+    display: grid;
+    /*grid-template-columns: 100%;*/
+    align-content: center;
+    justify-content: space-around;
+    height: 100px;
+    background-color: cadetblue;
+    color: white;
+}
+
+footer h3 {
+    grid-column: 1;
+    align-self: center;
+    font-weight: 500;
+}
+
+footer p {
+    grid-column: 2/3;
+    display: block;
+    align-self: center;
+    font-weight: 500;
+}
+
+.social_logo {
+    grid-column: 3;
+}
+
+.social_logo img:nth-child(2) {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.social_logo img:hover {
+    cursor: pointer;
+}
+
+.persons {
+    grid-row: 2 / 4;
+    grid-column: 1/3;
+    margin: 25px auto;
+    background-color: black;
+}
+
+.persons_data {
+    font-size: 18px;
+    line-height: 27px;
+    background-color: black;
+    padding: 20px;
+    width: 500px;
+    color: wheat;
+}
